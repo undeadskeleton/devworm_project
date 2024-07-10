@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlo1abi2tw0pg"]
+
+[ext_resource type="Texture2D" uid="uid://bypr7geaxgoxo" path="res://devworm_project/assets/Background.png" id="1_s8sf0"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(760, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("1_s8sf0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(380, 0)
+texture = ExtResource("1_s8sf0")
