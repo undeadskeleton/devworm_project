@@ -1,2 +1,4 @@
 res://scene/stage_lvl.tscn
 res://scene/lobby_lvl.tscn
+res://scene/player.tscn
+res://scripts/player.gd

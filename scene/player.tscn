@@ -1,6 +1,7 @@
-[gd_scene load_steps=58 format=3 uid="uid://wovkjidshlch"]
+[gd_scene load_steps=60 format=3 uid="uid://wovkjidshlch"]
 
 [ext_resource type="Texture2D" uid="uid://b5yr2fpnrwy8c" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/100x100/Attack Sprite 0-1.png" id="1_p6a28"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_pacu0"]
 [ext_resource type="Texture2D" uid="uid://bxmuevp3gv7uf" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png" id="2_cchxm"]
 [ext_resource type="Texture2D" uid="uid://c2autnt857cb5" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 0 Sprite Sheet.png" id="3_3txj1"]
 [ext_resource type="Texture2D" uid="uid://c1ye5fg74x4cp" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 1.png" id="4_tbqu7"]
@@ -386,10 +387,19 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xlvjs"]
+
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_pacu0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7ag25")
 animation = &"weapon_run"
 autoplay = "idle"
-frame_progress = 0.212849
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 10)
+shape = SubResource("CircleShape2D_xlvjs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
