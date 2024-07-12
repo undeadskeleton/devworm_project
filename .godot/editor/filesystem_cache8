@@ -1,18 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1720816018
+::res://::1720816019
 icon.svg::CompressedTexture2D::1310463153508420628::1720815978::1720816019::1::::<><>::
 README.md::TextFile::-1::1720815978::0::1::::<><>::
-::res://assets/::1720815978
+::res://assets/::1720816019
 Background.png::CompressedTexture2D::4103008252949068532::1720815978::1720816019::1::::<><>::
 BlockWithShade.png::CompressedTexture2D::5357339299724671005::1720815978::1720816019::1::::<><>::
 Bushes-16x16.png::CompressedTexture2D::1966988585960101032::1720815978::1720816019::1::::<><>::
 House1.png::CompressedTexture2D::559098798280636858::1720815978::1720816019::1::::<><>::
 TileSet-36x36.png::CompressedTexture2D::3761977876347276288::1720815978::1720816019::1::::<><>::
 Tree1.png::CompressedTexture2D::8731664924936663159::1720815978::1720816019::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/::1720816019
 Dacian.jpg::CompressedTexture2D::3141647294790322157::1720815978::1720816019::1::::<><>::
 ::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/::1720815978
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/::1720816019
 Attack 0-0.png::CompressedTexture2D::1577377320301930002::1720815978::1720816019::1::::<><>::
 Attack 0-1 Sprite Sheet.png::CompressedTexture2D::4026759230891004277::1720815978::1720816019::1::::<><>::
 Attack 0-1.png::CompressedTexture2D::7294365329839026392::1720815978::1720816019::1::::<><>::
@@ -26,7 +26,7 @@ Attack 1-2.png::CompressedTexture2D::3294901268231900007::1720815978::1720816019
 Attack 1-3.png::CompressedTexture2D::5990228705739127195::1720815978::1720816019::1::::<><>::
 Attack Sprite 0.png::CompressedTexture2D::9037690164699609975::1720815978::1720816019::1::::<><>::
 Attack Sprite 1.png::CompressedTexture2D::3551032832816212137::1720815978::1720816019::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/100x100/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/100x100/::1720816019
 Attack 0-1.png::CompressedTexture2D::3163903132766659196::1720815978::1720816019::1::::<><>::
 Attack 0-2.png::CompressedTexture2D::3951303593057323907::1720815978::1720816019::1::::<><>::
 Attack 0-3.png::CompressedTexture2D::329962184775664375::1720815978::1720816019::1::::<><>::
@@ -41,27 +41,27 @@ Attack Sprite 0-1.png::CompressedTexture2D::4542711750647058020::1720815978::172
 Attack Sprite 0.png::CompressedTexture2D::5370919959803653197::1720815978::1720816019::1::::<><>::
 Attack Sprite 1.png::CompressedTexture2D::379196265011947822::1720815978::1720816019::1::::<><>::
 ::res://assets/Dacian Warrior Animated Pixel-Art 2D/Climb-GoDown/::1720815978
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Climb-GoDown/50x50/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Climb-GoDown/50x50/::1720816019
 Climb-Down Sprite Sheet.png::CompressedTexture2D::556860773993937296::1720815978::1720816019::1::::<><>::
 Climb-Down-0.png::CompressedTexture2D::8216807153349980511::1720815978::1720816019::1::::<><>::
 Climb-Down-1.png::CompressedTexture2D::270947324610769890::1720815978::1720816019::1::::<><>::
 Climb-Down-2.png::CompressedTexture2D::3577208636140166247::1720815978::1720816019::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Climb-GoDown/100x100/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Climb-GoDown/100x100/::1720816019
 Climb-Down Sprite Sheet.png::CompressedTexture2D::7131946312980518585::1720815978::1720816019::1::::<><>::
 Climb-Down-0.png::CompressedTexture2D::2173797170241989280::1720815978::1720816019::1::::<><>::
 Climb-Down-1.png::CompressedTexture2D::1968677948704582186::1720815978::1720816019::1::::<><>::
 Climb-Down-2.png::CompressedTexture2D::6451618742781864423::1720815978::1720816019::1::::<><>::
 ::res://assets/Dacian Warrior Animated Pixel-Art 2D/Crouch/::1720815978
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Crouch/50x50/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Crouch/50x50/::1720816019
 Crouch 0-0.png::CompressedTexture2D::552117361715106029::1720815978::1720816019::1::::<><>::
 Crouch 0-1.png::CompressedTexture2D::4048149891736592678::1720815978::1720816019::1::::<><>::
 Crouch Sprite Sheet.png::CompressedTexture2D::8114271612930646778::1720815978::1720816019::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Crouch/100x100/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Crouch/100x100/::1720816019
 Crouch 0 Sprite Sheet.png::CompressedTexture2D::2213631713536681970::1720815978::1720816019::1::::<><>::
 Crouch 0-0.png::CompressedTexture2D::3029378965591607126::1720815978::1720816019::1::::<><>::
 Crouch 0-1.png::CompressedTexture2D::1500658373478639861::1720815978::1720816019::1::::<><>::
 ::res://assets/Dacian Warrior Animated Pixel-Art 2D/Dead/::1720815978
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Dead/50x50/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Dead/50x50/::1720816019
 Dead 0 Sprite Sheet.png::CompressedTexture2D::8464431482154656497::1720815978::1720816019::1::::<><>::
 Dead 0-0.png::CompressedTexture2D::8914863699637665839::1720815978::1720816019::1::::<><>::
 Dead 0-1.png::CompressedTexture2D::7923482572015663681::1720815978::1720816019::1::::<><>::
@@ -77,7 +77,7 @@ Dead 1-4.png::CompressedTexture2D::8311195348021341246::1720815978::1720816019::
 Dead 1-5.png::CompressedTexture2D::1578251204535741890::1720815978::1720816019::1::::<><>::
 Dead 1-6.png::CompressedTexture2D::9186377301995064699::1720815978::1720816019::1::::<><>::
 Dead 1-7.png::CompressedTexture2D::2475717317625724153::1720815978::1720816019::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Dead/100x100/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Dead/100x100/::1720816019
 Dead 0 Sprite Sheet.png::CompressedTexture2D::1132582279649756630::1720815978::1720816019::1::::<><>::
 Dead 0-0.png::CompressedTexture2D::8191712272166361452::1720815978::1720816019::1::::<><>::
 Dead 0-1.png::CompressedTexture2D::7277682870972495941::1720815978::1720816019::1::::<><>::
@@ -94,14 +94,14 @@ Dead 1-5.png::CompressedTexture2D::1713548440425799659::1720815978::1720816019::
 Dead 1-6.png::CompressedTexture2D::1104313042240072259::1720815978::1720816019::1::::<><>::
 Dead 1-7.png::CompressedTexture2D::2164572769866323510::1720815978::1720816019::1::::<><>::
 ::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/::1720815978
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/::1720816019
 Fall 0 Sprite Sheet.png::CompressedTexture2D::6669189129248153736::1720815978::1720816019::1::::<><>::
 Fall 0-0.png::CompressedTexture2D::7193951188321328657::1720815978::1720816019::1::::<><>::
 Fall 0-1.png::CompressedTexture2D::2479853355304394911::1720815978::1720816019::1::::<><>::
 Fall 1 Sprite Sheet.png::CompressedTexture2D::6328934722305064039::1720815978::1720816019::1::::<><>::
 Fall 1-0.png::CompressedTexture2D::7182401844376850753::1720815978::1720816019::1::::<><>::
 Fall 1-1.png::CompressedTexture2D::2308788251182704405::1720815978::1720816019::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/100x100/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/100x100/::1720816019
 Fall 0 Sprite Sheet.png::CompressedTexture2D::1867788741416918245::1720815978::1720816019::1::::<><>::
 Fall 0-0.png::CompressedTexture2D::2821261778490078571::1720815978::1720816019::1::::<><>::
 Fall 0-1.png::CompressedTexture2D::6656190259954129604::1720815978::1720816019::1::::<><>::
@@ -109,7 +109,7 @@ Fall 1 Sprite Sheet.png::CompressedTexture2D::5101545911898304786::1720815978::1
 Fall 1-0.png::CompressedTexture2D::3323232597091415::1720815978::1720816019::1::::<><>::
 pixil-frame-1.png::CompressedTexture2D::8341308022168013508::1720815978::1720816019::1::::<><>::
 ::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/::1720815978
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/::1720816019
 Idle 0-0.png::CompressedTexture2D::2014575591228992612::1720815978::1720816019::1::::<><>::
 Idle 0-1.png::CompressedTexture2D::3468772726166409263::1720815978::1720816019::1::::<><>::
 Idle 0-2.png::CompressedTexture2D::4705890740246636041::1720815978::1720816019::1::::<><>::
@@ -127,7 +127,7 @@ Idle Sprite 0.png::CompressedTexture2D::453670674795714788::1720815978::17208160
 Idle Sprite 1.png::CompressedTexture2D::6647593083239893583::1720815978::1720816018::1::::<><>::
 Idle Sprite 2.png::CompressedTexture2D::2452142255432834081::1720815978::1720816018::1::::<><>::
 Idle Sprite 3.png::CompressedTexture2D::2439176286329853464::1720815978::1720816018::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/100x100/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/100x100/::1720816018
 Idle 0-0.png::CompressedTexture2D::7600548358641721290::1720815978::1720816018::1::::<><>::
 Idle 0-1.png::CompressedTexture2D::1892716538740248607::1720815978::1720816018::1::::<><>::
 Idle 0-2.png::CompressedTexture2D::1808413637374471487::1720815978::1720816018::1::::<><>::
@@ -146,14 +146,14 @@ Idle Sprite 1.png::CompressedTexture2D::1598516153098713446::1720815978::1720816
 Idle Sprite 2.png::CompressedTexture2D::5223544060712123798::1720815978::1720816018::1::::<><>::
 Idle Sprite 3.png::CompressedTexture2D::6193979613857071576::1720815978::1720816018::1::::<><>::
 ::res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/::1720815978
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/50x50/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/50x50/::1720816018
 Jump 0-0.png::CompressedTexture2D::3779782777986194973::1720815978::1720816018::1::::<><>::
 Jump 0-1.png::CompressedTexture2D::3896290997842218358::1720815978::1720816018::1::::<><>::
 Jump 0-2.png::CompressedTexture2D::1556109645126826362::1720815978::1720816018::1::::<><>::
 Jump 0-3.png::CompressedTexture2D::8433508196894089830::1720815978::1720816018::1::::<><>::
 Jump 0-4.png::CompressedTexture2D::8650427533450863936::1720815978::1720816018::1::::<><>::
 Jump Sprite 0.png::CompressedTexture2D::2765574112943448236::1720815978::1720816018::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/100x100/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/100x100/::1720816018
 Jump 0-0.png::CompressedTexture2D::1744745408680343998::1720815978::1720816018::1::::<><>::
 Jump 0-1.png::CompressedTexture2D::39247267542416016::1720815978::1720816018::1::::<><>::
 Jump 0-2.png::CompressedTexture2D::6465083391379641022::1720815978::1720816018::1::::<><>::
@@ -161,7 +161,7 @@ Jump 0-3.png::CompressedTexture2D::8712955388959627259::1720815978::1720816018::
 Jump 0-4.png::CompressedTexture2D::1272239345116902127::1720815978::1720816018::1::::<><>::
 Jump Sprite 0.png::CompressedTexture2D::2421038640982301912::1720815978::1720816018::1::::<><>::
 ::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/::1720815978
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/::1720816019
 Run 0-0.png::CompressedTexture2D::2769531402716169417::1720815978::1720816018::1::::<><>::
 Run 0-1.png::CompressedTexture2D::7901182065797382054::1720815978::1720816019::1::::<><>::
 Run 0-2.png::CompressedTexture2D::2453654279920185478::1720815978::1720816019::1::::<><>::
@@ -180,7 +180,7 @@ Run 2-4.png::CompressedTexture2D::1941161925236080591::1720815978::1720816019::1
 Run Sprite 0.png::CompressedTexture2D::8962985707509857494::1720815978::1720816019::1::::<><>::
 Run Sprite 1.png::CompressedTexture2D::1195566510555100659::1720815978::1720816019::1::::<><>::
 Run Sprite 2.png::CompressedTexture2D::1012990198289183853::1720815978::1720816019::1::::<><>::
-::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/100x100/::1720815978
+::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/100x100/::1720816019
 Run 0-0.png::CompressedTexture2D::3410412856401496043::1720815978::1720816019::1::::<><>::
 Run 0-1.png::CompressedTexture2D::2190222037731893913::1720815978::1720816019::1::::<><>::
 Run 0-2.png::CompressedTexture2D::8558884953668554049::1720815978::1720816019::1::::<><>::
@@ -199,7 +199,8 @@ Run 2-4.png::CompressedTexture2D::4434217761505391117::1720815978::1720816018::1
 Run Sprite 0.png::CompressedTexture2D::4211363278981063842::1720815978::1720816019::1::::<><>::
 Run Sprite 1.png::CompressedTexture2D::4061495620350034627::1720815978::1720816019::1::::<><>::
 Run Sprite 2.png::CompressedTexture2D::1759885443602709918::1720815978::1720816019::1::::<><>::
-::res://scene/::1720815978
-lobby_lvl.tscn::PackedScene::2389802239715316956::1720815978::0::1::::<><>::uid://btulhximx4ipk::::res://devworm_project/assets/TileSet-36x36.png<>uid://3a3aq6a1loyi::::res://devworm_project/assets/Bushes-16x16.png<>uid://dlo1abi2tw0pg::::res://devworm_project/scene/parallax.tscn<>uid://h73jmrenw61k::::res://devworm_project/assets/House1.png<>uid://dwnxil6eedh7d::::res://devworm_project/assets/Tree1.png
+::res://scene/::1720816941
+lobby_lvl.tscn::PackedScene::2389802239715316956::1720816941::0::1::::<><>::uid://btulhximx4ipk::::res://assets/TileSet-36x36.png<>uid://3a3aq6a1loyi::::res://assets/Bushes-16x16.png<>uid://dlo1abi2tw0pg::::res://scene/parallax.tscn<>uid://h73jmrenw61k::::res://assets/House1.png<>uid://dwnxil6eedh7d::::res://assets/Tree1.png
 parallax.tscn::PackedScene::7961819327601250728::1720815978::0::1::::<><>::uid://bypr7geaxgoxo::::res://devworm_project/assets/Background.png
-stage_lvl.tscn::PackedScene::8359089776247999980::1720815978::0::1::::<><>::uid://bypr7geaxgoxo::::res://devworm_project/assets/Background.png<>uid://btulhximx4ipk::::res://devworm_project/assets/TileSet-36x36.png
+player.tscn::PackedScene::1574349248609928879::1720818262::0::1::::<><>::uid://b5yr2fpnrwy8c::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/100x100/Attack Sprite 0-1.png<>uid://bxmuevp3gv7uf::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png<>uid://c2autnt857cb5::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 0 Sprite Sheet.png<>uid://c1ye5fg74x4cp::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 1.png<>uid://bfnwupoxl6ba7::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/50x50/Jump Sprite 0.png<>uid://b1aasj3j1mtqw::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/100x100/Run Sprite 0.png<>uid://d106o3xylcgod::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack Sprite 0.png<>uid://cwf1vorw40xk6::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 1 Sprite Sheet.png<>uid://gp05isauh3o7::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 0.png<>uid://0crb55joo2fy::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/100x100/Run Sprite 2.png
+stage_lvl.tscn::PackedScene::8359089776247999980::1720816044::0::1::::<><>::uid://bypr7geaxgoxo::::res://assets/Background.png<>uid://btulhximx4ipk::::res://assets/TileSet-36x36.png
