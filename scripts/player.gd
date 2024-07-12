@@ -5,15 +5,15 @@ extends CharacterBody2D
 
 
 
-const SPEED = 400.0
+const SPEED = 250.0
 const JUMP_VELOCITY = -350.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 900
 
-var weapon_ready:bool
+
 func _ready():
-	weapon_ready=false
+	pass
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -36,6 +36,7 @@ func _physics_process(delta):
 	handle_animation(direction)
 	
 func handle_animation(dir):
+	var weapon_ready = GlobalScript.playerWeaponEquiped
 	if !weapon_ready:
 		if is_on_floor():
 			if !velocity:
@@ -43,10 +44,24 @@ func handle_animation(dir):
 			if velocity:
 				animated_sprite.play("run")
 		if !is_on_floor():
-			if Input.is_action_just_pressed("jump"):
-				animated_sprite.play("jump")
+			if velocity.y < 0:
+				animated_sprite.play("jump_up")
+				
 			else:
 				animated_sprite.play("fall")
+	elif weapon_ready:
+		if is_on_floor():
+			if !velocity:
+				animated_sprite.play("weapon_idle")
+			if velocity:
+				animated_sprite.play("weapon_run")
+		if !is_on_floor():
+			if velocity.y < 0:
+				animated_sprite.play("jump_up")
+				
+			else:
+				animated_sprite.play("weapon_fall")
+		
 				
 	toggle_flip_sprite(dir)
 

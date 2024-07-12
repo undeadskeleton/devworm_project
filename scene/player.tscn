@@ -294,7 +294,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3nlll")
 }],
 "loop": false,
-"name": &"jump",
+"name": &"jump_up",
 "speed": 8.0
 }, {
 "frames": [{
@@ -393,7 +393,7 @@ script = ExtResource("1_pacu0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7ag25")
-animation = &"weapon_run"
+animation = &"air_attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -401,4 +401,9 @@ position = Vector2(-2, 10)
 shape = SubResource("CircleShape2D_xlvjs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 zoom = Vector2(2.5, 2.5)
+limit_left = 30
+limit_top = -7
+limit_right = 1495
+limit_bottom = 576
