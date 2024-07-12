@@ -41,3 +41,10 @@ func handle_animation(dir):
 			animated_sprite.play("idle")
 		if velocity:
 			animated_sprite.play("run")
+			toggle_flip_sprite(dir)
+
+func toggle_flip_sprite(dir):
+	if dir == 1:
+		animated_sprite.flip_h = false
+	if dir == -1:
+		animated_sprite.flip_h = true
