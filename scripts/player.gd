@@ -37,11 +37,18 @@ func _physics_process(delta):
 	
 func handle_animation(dir):
 	if !weapon_ready:
-		if !velocity:
-			animated_sprite.play("idle")
-		if velocity:
-			animated_sprite.play("run")
-			toggle_flip_sprite(dir)
+		if is_on_floor():
+			if !velocity:
+				animated_sprite.play("idle")
+			if velocity:
+				animated_sprite.play("run")
+		if !is_on_floor():
+			if Input.is_action_just_pressed("jump"):
+				animated_sprite.play("jump")
+			else:
+				animated_sprite.play("fall")
+				
+	toggle_flip_sprite(dir)
 
 func toggle_flip_sprite(dir):
 	if dir == 1:
