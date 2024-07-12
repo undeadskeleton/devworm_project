@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8u1d4sggdxxx"
-path="res://.godot/imported/Climb-Down Sprite Sheet.png-620d364ff09aadffb028c90a6f93918f.ctex"
+path="res://.godot/imported/Climb-Down Sprite Sheet.png-5b549caf16a9e864f4ec86fd6f39bf66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devworm_project/assets/Dacian Warrior Animated Pixel-Art 2D/Climb-GoDown/100x100/Climb-Down Sprite Sheet.png"
-dest_files=["res://.godot/imported/Climb-Down Sprite Sheet.png-620d364ff09aadffb028c90a6f93918f.ctex"]
+source_file="res://assets/Dacian Warrior Animated Pixel-Art 2D/Climb-GoDown/100x100/Climb-Down Sprite Sheet.png"
+dest_files=["res://.godot/imported/Climb-Down Sprite Sheet.png-5b549caf16a9e864f4ec86fd6f39bf66.ctex"]
 
 [params]
 

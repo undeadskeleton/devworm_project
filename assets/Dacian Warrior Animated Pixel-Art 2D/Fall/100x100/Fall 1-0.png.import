@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buy6r645vbb"
-path="res://.godot/imported/Fall 1-0.png-5ba82b91cd87c1521e503c3d7e47a174.ctex"
+path="res://.godot/imported/Fall 1-0.png-4ac5961885159d0ea068c4b026644fd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devworm_project/assets/Dacian Warrior Animated Pixel-Art 2D/Fall/100x100/Fall 1-0.png"
-dest_files=["res://.godot/imported/Fall 1-0.png-5ba82b91cd87c1521e503c3d7e47a174.ctex"]
+source_file="res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/100x100/Fall 1-0.png"
+dest_files=["res://.godot/imported/Fall 1-0.png-4ac5961885159d0ea068c4b026644fd7.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3a3aq6a1loyi"
-path="res://.godot/imported/Bushes-16x16.png-143ea4981e9cefe9573b24fafc350fa7.ctex"
+path="res://.godot/imported/Bushes-16x16.png-fd7f7d7a456767c8669ab4e45578403e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devworm_project/assets/Bushes-16x16.png"
-dest_files=["res://.godot/imported/Bushes-16x16.png-143ea4981e9cefe9573b24fafc350fa7.ctex"]
+source_file="res://assets/Bushes-16x16.png"
+dest_files=["res://.godot/imported/Bushes-16x16.png-fd7f7d7a456767c8669ab4e45578403e.ctex"]
 
 [params]
 

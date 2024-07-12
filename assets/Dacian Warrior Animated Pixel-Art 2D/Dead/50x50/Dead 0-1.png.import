@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk5gun8g8s066"
-path="res://.godot/imported/Dead 0-1.png-935a0af5ded968a35feb4e6b9f78472b.ctex"
+path="res://.godot/imported/Dead 0-1.png-5be35de1264271f182b097be1fe17a4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devworm_project/assets/Dacian Warrior Animated Pixel-Art 2D/Dead/50x50/Dead 0-1.png"
-dest_files=["res://.godot/imported/Dead 0-1.png-935a0af5ded968a35feb4e6b9f78472b.ctex"]
+source_file="res://assets/Dacian Warrior Animated Pixel-Art 2D/Dead/50x50/Dead 0-1.png"
+dest_files=["res://.godot/imported/Dead 0-1.png-5be35de1264271f182b097be1fe17a4b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfjxtahe7tgyj"
-path="res://.godot/imported/Attack 0-4.png-ab19778029f22e29c5b4f168738c3e56.ctex"
+path="res://.godot/imported/Attack 0-4.png-b0607ed91e7bd952f3053bfcd30506d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devworm_project/assets/Dacian Warrior Animated Pixel-Art 2D/Attack/100x100/Attack 0-4.png"
-dest_files=["res://.godot/imported/Attack 0-4.png-ab19778029f22e29c5b4f168738c3e56.ctex"]
+source_file="res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/100x100/Attack 0-4.png"
+dest_files=["res://.godot/imported/Attack 0-4.png-b0607ed91e7bd952f3053bfcd30506d3.ctex"]
 
 [params]
 

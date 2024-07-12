@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxw7o4qwb777w"
-path="res://.godot/imported/Crouch 0-1.png-fd4921489bbf88e0e1d07df198ebcdbf.ctex"
+path="res://.godot/imported/Crouch 0-1.png-7b6c75afaf3f679164160658d0af413f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devworm_project/assets/Dacian Warrior Animated Pixel-Art 2D/Crouch/50x50/Crouch 0-1.png"
-dest_files=["res://.godot/imported/Crouch 0-1.png-fd4921489bbf88e0e1d07df198ebcdbf.ctex"]
+source_file="res://assets/Dacian Warrior Animated Pixel-Art 2D/Crouch/50x50/Crouch 0-1.png"
+dest_files=["res://.godot/imported/Crouch 0-1.png-7b6c75afaf3f679164160658d0af413f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1aasj3j1mtqw"
-path="res://.godot/imported/Run Sprite 0.png-088c370560a2ea7a927bc73340b194b7.ctex"
+path="res://.godot/imported/Run Sprite 0.png-f8e9ce6abcb1bc52679b33ec34e5d8cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devworm_project/assets/Dacian Warrior Animated Pixel-Art 2D/Run/100x100/Run Sprite 0.png"
-dest_files=["res://.godot/imported/Run Sprite 0.png-088c370560a2ea7a927bc73340b194b7.ctex"]
+source_file="res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/100x100/Run Sprite 0.png"
+dest_files=["res://.godot/imported/Run Sprite 0.png-f8e9ce6abcb1bc52679b33ec34e5d8cb.ctex"]
 
 [params]
 

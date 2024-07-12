@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8btlk5mtqkbp"
-path="res://.godot/imported/Idle 0-2.png-c2c8664f408b9c11cdcf722a10a02415.ctex"
+path="res://.godot/imported/Idle 0-2.png-5a3c28e59e5b26d9239c327756a2d8ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://devworm_project/assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle 0-2.png"
-dest_files=["res://.godot/imported/Idle 0-2.png-c2c8664f408b9c11cdcf722a10a02415.ctex"]
+source_file="res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle 0-2.png"
+dest_files=["res://.godot/imported/Idle 0-2.png-5a3c28e59e5b26d9239c327756a2d8ad.ctex"]
 
 [params]
 
