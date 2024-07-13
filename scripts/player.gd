@@ -13,7 +13,7 @@ var gravity = 900
 
 
 func _ready():
-	pass
+	GlobalScript.playerBody = self
 
 func _physics_process(delta):
 	# Add the gravity.

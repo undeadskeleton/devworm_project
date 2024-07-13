@@ -1,2 +1,7 @@
 res://scripts/bat_enemy.gd
 res://scene/bat_enemy.tscn
+res://scene/stage_lvl.tscn
+res://scene/lobby_lvl.tscn
+res://scene/player.tscn
+res://scripts/global_script.gd
+res://scripts/player.gd
