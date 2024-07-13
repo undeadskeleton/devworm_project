@@ -23,7 +23,7 @@ func move(delta):
 	move_and_slide()
 
 func _on_timer_timeout():
-	$Timer.wait_time = chose ([1.0,1.5,2.0])
+	$Timer.wait_time = chose ([0.3,0.5])
 	if !is_bat_chase:
 		dir = chose([Vector2.RIGHT, Vector2.LEFT, Vector2.UP, Vector2.DOWN])
 		
