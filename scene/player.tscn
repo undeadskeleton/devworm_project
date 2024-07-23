@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://wovkjidshlch"]
+[gd_scene load_steps=59 format=3 uid="uid://wovkjidshlch"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pacu0"]
 [ext_resource type="Texture2D" uid="uid://bxmuevp3gv7uf" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png" id="2_cchxm"]
@@ -18,6 +18,14 @@ region = Rect2(250, 0, 50, 37)
 [sub_resource type="AtlasTexture" id="AtlasTexture_78odq"]
 atlas = ExtResource("2_cchxm")
 region = Rect2(350, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxj7v"]
+atlas = ExtResource("2_cchxm")
+region = Rect2(400, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxj1y"]
+atlas = ExtResource("2_cchxm")
+region = Rect2(450, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1wb4"]
 atlas = ExtResource("2_cchxm")
@@ -191,6 +199,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_78odq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxj7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxj1y")
 }],
 "loop": false,
 "name": &"air_attack",
@@ -375,10 +389,8 @@ script = ExtResource("1_pacu0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7ag25")
-animation = &"air_attack"
+animation = &"double_attack"
 autoplay = "idle"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 10)
@@ -397,5 +409,6 @@ limit_bottom = 576
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(12, 2)
 shape = SubResource("CircleShape2D_5v7ib")
+disabled = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
