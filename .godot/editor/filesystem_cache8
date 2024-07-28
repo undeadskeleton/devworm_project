@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721723946
+::res://::1722176029
 icon.svg::CompressedTexture2D::1310463153508420628::1720815978::1720816019::1::::<><>::
 README.md::TextFile::-1::1720815978::0::1::::<><>::
 ::res://assets/::1721101797
@@ -242,15 +242,15 @@ Run 2-4.png::CompressedTexture2D::4434217761505391117::1720815978::1720816018::1
 Run Sprite 0.png::CompressedTexture2D::4211363278981063842::1720815978::1720816019::1::::<><>::
 Run Sprite 1.png::CompressedTexture2D::4061495620350034627::1720815978::1720816019::1::::<><>::
 Run Sprite 2.png::CompressedTexture2D::1759885443602709918::1720815978::1720816019::1::::<><>::
-::res://scene/::1721722448
-bat_enemy.tscn::PackedScene::7578794202262728085::1721722398::0::1::::<><>::uid://bxag0mo8ugnyf::::res://assets/Bat/Standard/BatStandard_Attack.png<>res://scripts/bat_enemy.gd<>uid://bk81vlq5tpvx3::::res://assets/Bat/Standard/BatStandard_Death.png<>uid://dl10kfol1sfti::::res://assets/Bat/Standard/BatStandard_Flying.png<>uid://c7hxqkbprk2xc::::res://assets/Bat/Standard/BatStandard_Hurt.png
-lobby_lvl.tscn::PackedScene::2389802239715316956::1721722398::0::1::::<><>::uid://btulhximx4ipk::::res://assets/TileSet-36x36.png<>uid://3a3aq6a1loyi::::res://assets/Bushes-16x16.png<>uid://dlo1abi2tw0pg::::res://scene/parallax.tscn<>res://scripts/lobby_lvl.gd<>uid://h73jmrenw61k::::res://assets/House1.png<>uid://dwnxil6eedh7d::::res://assets/Tree1.png<>uid://wovkjidshlch::::res://scene/player.tscn
+::res://scene/::1722175595
+bat_enemy.tscn::PackedScene::7578794202262728085::1722175595::0::1::::<><>::uid://bxag0mo8ugnyf::::res://assets/Bat/Standard/BatStandard_Attack.png<>res://scripts/bat_enemy.gd<>uid://bk81vlq5tpvx3::::res://assets/Bat/Standard/BatStandard_Death.png<>uid://dl10kfol1sfti::::res://assets/Bat/Standard/BatStandard_Flying.png<>uid://c7hxqkbprk2xc::::res://assets/Bat/Standard/BatStandard_Hurt.png
+lobby_lvl.tscn::PackedScene::2389802239715316956::1722175595::0::1::::<><>::uid://btulhximx4ipk::::res://assets/TileSet-36x36.png<>uid://3a3aq6a1loyi::::res://assets/Bushes-16x16.png<>uid://dlo1abi2tw0pg::::res://scene/parallax.tscn<>res://scripts/lobby_lvl.gd<>uid://h73jmrenw61k::::res://assets/House1.png<>uid://dwnxil6eedh7d::::res://assets/Tree1.png<>uid://wovkjidshlch::::res://scene/player.tscn
 parallax.tscn::PackedScene::7961819327601250728::1720815978::0::1::::<><>::uid://bypr7geaxgoxo::::res://devworm_project/assets/Background.png
-player.tscn::PackedScene::1574349248609928879::1721722448::0::1::::<><>::res://scripts/player.gd<>uid://bxmuevp3gv7uf::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png<>uid://c2autnt857cb5::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 0 Sprite Sheet.png<>uid://c1ye5fg74x4cp::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 1.png<>uid://bfnwupoxl6ba7::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/50x50/Jump Sprite 0.png<>uid://d0x0chiptpay5::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/Run Sprite 0.png<>uid://d106o3xylcgod::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack Sprite 0.png<>uid://cwf1vorw40xk6::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 1 Sprite Sheet.png<>uid://gp05isauh3o7::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 0.png<>uid://oox2hppkkx86::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/Run Sprite 2.png
-stage_lvl.tscn::PackedScene::8359089776247999980::1721722398::0::1::::<><>::uid://bypr7geaxgoxo::::res://assets/Background.png<>res://scripts/stage_lvl.gd<>uid://btulhximx4ipk::::res://assets/TileSet-36x36.png<>uid://wovkjidshlch::::res://scene/player.tscn<>uid://df8hvsaxq6eqn::::res://scene/bat_enemy.tscn
-::res://scripts/::1721722448
-bat_enemy.gd::GDScript::-1::1721101797::0::1::::<>CharacterBody2D<>::
-global_script.gd::GDScript::-1::1721101797::0::1::::<>Node<>::
+player.tscn::PackedScene::1574349248609928879::1722175595::0::1::::<><>::res://scripts/player.gd<>uid://bxmuevp3gv7uf::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png<>uid://c2autnt857cb5::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 0 Sprite Sheet.png<>uid://c1ye5fg74x4cp::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 1.png<>uid://bfnwupoxl6ba7::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/50x50/Jump Sprite 0.png<>uid://d0x0chiptpay5::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/Run Sprite 0.png<>uid://d106o3xylcgod::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack Sprite 0.png<>uid://cwf1vorw40xk6::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 1 Sprite Sheet.png<>uid://gp05isauh3o7::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 0.png<>uid://oox2hppkkx86::::res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/Run Sprite 2.png
+stage_lvl.tscn::PackedScene::8359089776247999980::1722175595::0::1::::<><>::uid://bypr7geaxgoxo::::res://assets/Background.png<>res://scripts/stage_lvl.gd<>uid://btulhximx4ipk::::res://assets/TileSet-36x36.png<>uid://wovkjidshlch::::res://scene/player.tscn<>uid://df8hvsaxq6eqn::::res://scene/bat_enemy.tscn
+::res://scripts/::1722174848
+bat_enemy.gd::GDScript::-1::1722174848::0::1::::<>CharacterBody2D<>::
+global_script.gd::GDScript::-1::1721726858::0::1::::<>Node<>::
 lobby_lvl.gd::GDScript::-1::1721101797::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1721722448::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1721731147::0::1::::<>CharacterBody2D<>::
 stage_lvl.gd::GDScript::-1::1721101797::0::1::::<>Node2D<>::

@@ -77,20 +77,20 @@ shape = SubResource("RectangleShape2D_rcl56")
 position = Vector2(239, 29)
 
 [node name="batEnemy" parent="." instance=ExtResource("5_86mxp")]
-position = Vector2(544, 394)
+position = Vector2(548, 464)
 
 [node name="batcollision" type="StaticBody2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="batcollision"]
-polygon = PackedVector2Array(-1, -2, 80, 2, 93, 44, 95, 516, 541, 513, 876, 509, 1500, 508, 1497, 345, 1496, 37, 1485, -3, 1097, -1, 607, 2, 344, 1, 94, -3, 79, -66, 1650, -67, 1657, 397, 1645, 612, 22, 620)
+polygon = PackedVector2Array(-1, -2, 80, 2, 93, 44, 94, 532, 539, 532, 875, 529, 1502, 531, 1497, 345, 1496, 37, 1485, -3, 1097, -1, 607, 2, 344, 1, 94, -3, 79, -66, 1650, -67, 1657, 397, 1645, 612, 22, 620)
 
 [node name="batEnemy3" parent="." instance=ExtResource("5_86mxp")]
-position = Vector2(321, 425)
+position = Vector2(320, 456)
 
 [node name="batEnemy2" parent="." instance=ExtResource("5_86mxp")]
-position = Vector2(787, 422)
+position = Vector2(783, 462)
 
 [node name="batEnemy4" parent="." instance=ExtResource("5_86mxp")]
-position = Vector2(1133, 416)
+position = Vector2(471, 442)

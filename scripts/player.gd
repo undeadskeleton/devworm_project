@@ -23,7 +23,7 @@ func _ready():
 	
 func _physics_process(delta):
 	weapon_ready = GlobalScript.playerWeaponEquiped
-	GlobalScript.playerD
+	GlobalScript.playerDamageZone =deal_damage_zone
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -50,6 +50,7 @@ func _physics_process(delta):
 				attack_type = "double"
 			else:
 				attack_type = "air"
+			set_damage(attack_type)
 			handle_attack_animation(attack_type)
 
 	
@@ -119,3 +120,14 @@ func toogle_damage_collision(attack_type):
 
 func _on_animated_sprite_2d_animation_finished():
 	current_attack = false
+	
+func set_damage(attack_type):
+	var current_damage_dealt : int
+	if attack_type == "single":
+		current_damage_dealt = 8
+	elif attack_type == "double":
+		current_damage_dealt = 16
+	elif attack_type == "air":
+		current_damage_dealt = 20
+	GlobalScript.playerDamage = current_damage_dealt
+	
