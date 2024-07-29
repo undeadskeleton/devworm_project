@@ -13,39 +13,46 @@ var is_talking_damage = false
 var is_roaming : bool
 var batDamage = 20
 
-func _ready():
-	is_bat_chase = true
-	
+
 func _process(delta):
 	GlobalScript.batDamageZone = $batDamageZone
 	GlobalScript.batDamage = batDamage
+	
+	if GlobalScript.playerAlive:
+		is_bat_chase = true
+	elif !GlobalScript.playerAlive:
+		is_bat_chase = false
+		print("batchase: ",is_bat_chase)
+	
 	if dead and is_on_floor_only():
 		await get_tree().create_timer(3.0).timeout
 		self.queue_free()
 	move(delta)
 	handle_animation()
+	
+func _on_timer_timeout():
+	$Timer.wait_time = chose ([0.3,0.5])
+	if !is_bat_chase:
+		dir = chose([Vector2.RIGHT, Vector2.LEFT, Vector2.UP, Vector2.DOWN])
 		
 func move(delta):
 	player = GlobalScript.playerBody
 	if !dead:
 		is_roaming = true
-		if is_bat_chase:
-			if !is_talking_damage:
-				velocity = position.direction_to(player.position) * speed
-				dir.x = abs(velocity.x)/velocity.x
-			elif is_talking_damage:
-				velocity = position.direction_to(player.position) * -50
-		elif !is_bat_chase and !is_talking_damage:
+		if is_bat_chase and !is_talking_damage and GlobalScript.playerAlive:
+			velocity = position.direction_to(player.position) * speed
+			dir.x = abs(velocity.x)/velocity.x
+		elif is_talking_damage:
+			var knockback = position.direction_to(player.position) * -50
+			velocity = knockback
+		else:
 			velocity += speed * dir * delta
+			print("free roaming",is_bat_chase)
 	elif dead:
 		velocity.y -= delta * -100 
 		velocity.x = 0
 	move_and_slide()
 
-func _on_timer_timeout():
-	$Timer.wait_time = chose ([0.3,0.5])
-	if !is_bat_chase:
-		dir = chose([Vector2.RIGHT, Vector2.LEFT, Vector2.UP, Vector2.DOWN])
 		
 		
 func handle_animation():

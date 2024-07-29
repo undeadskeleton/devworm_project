@@ -3,3 +3,4 @@ res://scripts/player.gd
 res://scene/stage_lvl.tscn
 res://scene/lobby_lvl.tscn
 res://scene/bat_enemy.tscn
+res://scripts/bat_enemy.gd

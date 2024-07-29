@@ -21,12 +21,13 @@ var gravity = 900
 
 func _ready():
 	GlobalScript.playerBody = self
-	print(weapon_ready)
- 
-	
-func _physics_process(delta):
 	is_alive = true
 	is_allowed_to_take_damage = true
+	print(weapon_ready)
+ 
+func _physics_process(delta):
+	#is_alive = true
+	#is_allowed_to_take_damage = true
 	weapon_ready = GlobalScript.playerWeaponEquiped
 	GlobalScript.playerDamageZone =deal_damage_zone
 	GlobalScript.playerAlive = true
@@ -74,22 +75,24 @@ func take_damage(damage):
 	if damage != 0: 
 		if health > 0:
 			health -= damage
-			take_damage_cooldown(3)
 			print("current health", health)
-			
-		if health <= 0:
+			if health <= 0:
 				health = 0
+				print("dead")
 				is_alive = false
 				GlobalScript.playerAlive = false
 				handle_death_animation()
+			take_damage_cooldown(1.5)
 
 func handle_death_animation():
-	print("playing death ")
 	animated_sprite.play("death")
+	$Camera2D.zoom.x = 4
+	$Camera2D.zoom.y = 4
+	await get_tree().create_timer(3.5).timeout
+	
 
 
 func take_damage_cooldown(wait_time):
-	print("is on cooldownw")
 	is_allowed_to_take_damage = false
 	await get_tree().create_timer(wait_time).timeout
 	is_allowed_to_take_damage = true
