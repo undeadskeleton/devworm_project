@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Batenemy
 
 const speed = 30
 var dir: Vector2
@@ -10,11 +11,17 @@ var damage : int
 var dead = false
 var is_talking_damage = false
 var is_roaming : bool
+var batDamage = 20
 
 func _ready():
 	is_bat_chase = true
 	
 func _process(delta):
+	GlobalScript.batDamageZone = $batDamageZone
+	GlobalScript.batDamage = batDamage
+	if dead and is_on_floor_only():
+		await get_tree().create_timer(3.0).timeout
+		self.queue_free()
 	move(delta)
 	handle_animation()
 		
@@ -56,6 +63,10 @@ func handle_animation():
 	elif dead and is_roaming:
 		is_roaming = false
 		animatied_sprite.play("death")
+		set_collision_layer_value(1,true)
+		set_collision_layer_value(2,false)
+		set_collision_mask_value(1,true)
+		set_collision_mask_value(2,false)
 		
 	
 func chose(array):

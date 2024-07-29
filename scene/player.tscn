@@ -1,8 +1,9 @@
-[gd_scene load_steps=59 format=3 uid="uid://wovkjidshlch"]
+[gd_scene load_steps=69 format=3 uid="uid://wovkjidshlch"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pacu0"]
 [ext_resource type="Texture2D" uid="uid://bxmuevp3gv7uf" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png" id="2_cchxm"]
 [ext_resource type="Texture2D" uid="uid://c2autnt857cb5" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 0 Sprite Sheet.png" id="3_3txj1"]
+[ext_resource type="Texture2D" uid="uid://csapxvfirt1gl" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Dead/50x50/Dead 1 Sprite Sheet.png" id="3_8tsyn"]
 [ext_resource type="Texture2D" uid="uid://c1ye5fg74x4cp" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 1.png" id="4_tbqu7"]
 [ext_resource type="Texture2D" uid="uid://bfnwupoxl6ba7" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Jump/50x50/Jump Sprite 0.png" id="5_1up2p"]
 [ext_resource type="Texture2D" uid="uid://d0x0chiptpay5" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/Run Sprite 0.png" id="6_mnuwh"]
@@ -26,6 +27,38 @@ region = Rect2(400, 0, 50, 37)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxj1y"]
 atlas = ExtResource("2_cchxm")
 region = Rect2(450, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ile35"]
+atlas = ExtResource("3_8tsyn")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw0ub"]
+atlas = ExtResource("3_8tsyn")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o34jl"]
+atlas = ExtResource("3_8tsyn")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5271q"]
+atlas = ExtResource("3_8tsyn")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mge7"]
+atlas = ExtResource("3_8tsyn")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyb5c"]
+atlas = ExtResource("3_8tsyn")
+region = Rect2(250, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsfc7"]
+atlas = ExtResource("3_8tsyn")
+region = Rect2(300, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3a0p"]
+atlas = ExtResource("3_8tsyn")
+region = Rect2(350, 0, 50, 50)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1wb4"]
 atlas = ExtResource("2_cchxm")
@@ -212,6 +245,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ile35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw0ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o34jl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5271q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mge7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyb5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsfc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3a0p")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_y1wb4")
 }, {
 "duration": 1.0,
@@ -384,13 +446,19 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5v7ib"]
 radius = 7.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5urnf"]
+radius = 8.0
+height = 26.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_pacu0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7ag25")
-animation = &"double_attack"
+animation = &"death"
 autoplay = "idle"
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 10)
@@ -404,11 +472,17 @@ limit_top = -7
 limit_right = 1495
 limit_bottom = 576
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="playerDamageZone" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerDamageZone"]
 position = Vector2(12, 2)
 shape = SubResource("CircleShape2D_5v7ib")
 disabled = true
+
+[node name="playerHitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerHitBox"]
+position = Vector2(1, 6)
+shape = SubResource("CapsuleShape2D_5urnf")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

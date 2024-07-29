@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var deal_damage_zone = $Area2D
+@onready var deal_damage_zone = $playerDamageZone
 
 
 
@@ -11,7 +11,10 @@ const JUMP_VELOCITY = -350.0
 var current_attack :bool
 var attack_type : String
 var weapon_ready : bool
-
+var health : int = 100
+var is_alive : bool
+var is_allowed_to_take_damage : bool
+var damage= GlobalScript.batDamage
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 900
 
@@ -22,43 +25,78 @@ func _ready():
  
 	
 func _physics_process(delta):
+	is_alive = true
+	is_allowed_to_take_damage = true
 	weapon_ready = GlobalScript.playerWeaponEquiped
 	GlobalScript.playerDamageZone =deal_damage_zone
+	GlobalScript.playerAlive = true
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if is_alive:
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
+		var direction = Input.get_axis("left", "right")
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 
-	if weapon_ready and !current_attack:
-		if Input.is_action_just_pressed("right_mouse") or Input.is_action_just_pressed("left_mouse"):
-			current_attack = true
-			if Input.is_action_just_pressed("right_mouse") and is_on_floor():
-				attack_type = "single"
-			elif Input.is_action_just_pressed("left_mouse") and is_on_floor():
-				attack_type = "double"
-			else:
-				attack_type = "air"
-			set_damage(attack_type)
-			handle_attack_animation(attack_type)
-
-	
+		if weapon_ready and !current_attack:
+			if Input.is_action_just_pressed("right_mouse") or Input.is_action_just_pressed("left_mouse"):
+				current_attack = true
+				if Input.is_action_just_pressed("right_mouse") and is_on_floor():
+					attack_type = "single"
+				elif Input.is_action_just_pressed("left_mouse") and is_on_floor():
+					attack_type = "double"
+				else:
+					attack_type = "air"
+				set_damage(attack_type)
+				handle_attack_animation(attack_type)
+		handle_animation(direction)
+		check_hitbox()
 	move_and_slide()
-	handle_animation(direction)
 	
+func check_hitbox():
+	var area_hitbox = $playerHitBox.get_overlapping_areas()
+	if area_hitbox:
+		var hitbox = area_hitbox.front()
+		if hitbox.get_parent() is Batenemy:
+			damage = GlobalScript.batDamage
+	
+	if is_allowed_to_take_damage:
+		take_damage(damage)
+
+func take_damage(damage):
+	if damage != 0: 
+		if health > 0:
+			health -= damage
+			take_damage_cooldown(3)
+			print("current health", health)
+			
+		if health <= 0:
+				health = 0
+				is_alive = false
+				GlobalScript.playerAlive = false
+				handle_death_animation()
+
+func handle_death_animation():
+	print("playing death ")
+	animated_sprite.play("death")
+
+
+func take_damage_cooldown(wait_time):
+	print("is on cooldownw")
+	is_allowed_to_take_damage = false
+	await get_tree().create_timer(wait_time).timeout
+	is_allowed_to_take_damage = true
+
+
+
 func handle_animation(dir):
-	
 	if !weapon_ready:
 		if is_on_floor():
 			if !velocity:
@@ -130,4 +168,4 @@ func set_damage(attack_type):
 	elif attack_type == "air":
 		current_damage_dealt = 20
 	GlobalScript.playerDamage = current_damage_dealt
-	
+
