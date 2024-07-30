@@ -13,6 +13,8 @@ var is_talking_damage = false
 var is_roaming : bool
 var batDamage = 20
 
+func _ready():
+	pass
 
 func _process(delta):
 	GlobalScript.batDamageZone = $batDamageZone
@@ -22,8 +24,7 @@ func _process(delta):
 		is_bat_chase = true
 	elif !GlobalScript.playerAlive:
 		is_bat_chase = false
-		print("batchase: ",is_bat_chase)
-	
+		
 	if dead and is_on_floor_only():
 		await get_tree().create_timer(3.0).timeout
 		self.queue_free()
@@ -47,7 +48,7 @@ func move(delta):
 			velocity = knockback
 		else:
 			velocity += speed * dir * delta
-			print("free roaming",is_bat_chase)
+			print(self, "free roaming" ,is_bat_chase," is player alive: ",GlobalScript.playerAlive)
 	elif dead:
 		velocity.y -= delta * -100 
 		velocity.x = 0

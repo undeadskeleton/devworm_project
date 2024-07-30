@@ -21,6 +21,7 @@ var gravity = 900
 
 func _ready():
 	GlobalScript.playerBody = self
+	GlobalScript.playerAlive = true
 	is_alive = true
 	is_allowed_to_take_damage = true
 	print(weapon_ready)
@@ -30,7 +31,6 @@ func _physics_process(delta):
 	#is_allowed_to_take_damage = true
 	weapon_ready = GlobalScript.playerWeaponEquiped
 	GlobalScript.playerDamageZone =deal_damage_zone
-	GlobalScript.playerAlive = true
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -85,11 +85,13 @@ func take_damage(damage):
 			take_damage_cooldown(1.5)
 
 func handle_death_animation():
+	$CollisionShape2D.position.y = 5
 	animated_sprite.play("death")
+	await get_tree().create_timer(0.5).timeout
 	$Camera2D.zoom.x = 4
 	$Camera2D.zoom.y = 4
 	await get_tree().create_timer(3.5).timeout
-	
+	self.queue_free()
 
 
 func take_damage_cooldown(wait_time):
