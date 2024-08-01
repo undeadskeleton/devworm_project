@@ -86,9 +86,9 @@ func chose(array):
 func _on_area_2d_area_entered(area):
 	if area == GlobalScript.playerDamageZone:
 		damage = GlobalScript.playerDamage
-		taking_damage(damage)
+		taking_damage()
 	
-func taking_damage(damage):
+func taking_damage():
 	health -= damage
 	is_talking_damage = true
 	if health <= 0:

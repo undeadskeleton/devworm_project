@@ -1,9 +1,5 @@
+res://scene/player.tscn
+res://scripts/player.gd
 res://scene/stage_lvl.tscn
 res://scene/lobby_lvl.tscn
-res://scene/player.tscn
 res://scene/bat_enemy.tscn
-res://scripts/player.gd
-res://scripts/global_script.gd
-res://scripts/lobby_lvl.gd
-res://scripts/stage_lvl.gd
-res://scripts/bat_enemy.gd

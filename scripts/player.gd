@@ -13,7 +13,7 @@ var weapon_ready : bool
 var health : int = 100
 var is_alive : bool
 var is_allowed_to_take_damage : bool
-var damage= GlobalScript.batDamage
+var damage = 0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 900
 
@@ -58,8 +58,6 @@ func _physics_process(delta):
 				handle_attack_animation(attack_type)
 		handle_animation(direction)
 		check_hitbox()
-	#else:
-		#velocity.x = 0
 	move_and_slide()
 	
 func check_hitbox():
