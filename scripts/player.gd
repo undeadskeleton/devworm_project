@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
+class_name PlayerBody
+
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var deal_damage_zone = $playerDamageZone
-
-
-
 
 const SPEED = 250.0
 const JUMP_VELOCITY = -350.0
@@ -59,6 +58,8 @@ func _physics_process(delta):
 				handle_attack_animation(attack_type)
 		handle_animation(direction)
 		check_hitbox()
+	#else:
+		#velocity.x = 0
 	move_and_slide()
 	
 func check_hitbox():
@@ -80,17 +81,18 @@ func take_damage(damage):
 				health = 0
 				print("dead")
 				is_alive = false
-				GlobalScript.playerAlive = false
 				handle_death_animation()
 			take_damage_cooldown(1.5)
 
 func handle_death_animation():
 	$CollisionShape2D.position.y = 5
+	velocity.x=0
 	animated_sprite.play("death")
 	await get_tree().create_timer(0.5).timeout
 	$Camera2D.zoom.x = 4
 	$Camera2D.zoom.y = 4
-	await get_tree().create_timer(3.5).timeout
+	await get_tree().create_timer(5).timeout
+	GlobalScript.playerAlive = false
 	self.queue_free()
 
 

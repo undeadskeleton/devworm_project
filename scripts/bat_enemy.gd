@@ -48,7 +48,6 @@ func move(delta):
 			velocity = knockback
 		else:
 			velocity += speed * dir * delta
-			print(self, "free roaming" ,is_bat_chase," is player alive: ",GlobalScript.playerAlive)
 	elif dead:
 		velocity.y -= delta * -100 
 		velocity.x = 0

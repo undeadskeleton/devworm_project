@@ -10,4 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if !GlobalScript.playerAlive:
+		get_tree().change_scene_to_file("res://scene/lobby_lvl.tscn")
+	
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://babvxt7rh26ds"]
+[gd_scene load_steps=13 format=3 uid="uid://babvxt7rh26ds"]
 
 [ext_resource type="Texture2D" uid="uid://btulhximx4ipk" path="res://assets/TileSet-36x36.png" id="1_0y4p2"]
 [ext_resource type="Texture2D" uid="uid://3a3aq6a1loyi" path="res://assets/Bushes-16x16.png" id="1_ngla7"]
@@ -66,6 +66,9 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_ffseq")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smgfi"]
+size = Vector2(75, 20)
+
 [node name="LobbyLvl" type="Node2D"]
 script = ExtResource("1_yejjw")
 
@@ -103,3 +106,11 @@ position = Vector2(39, 11)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(218, 0)
 zoom = Vector2(2.6, 2.6)
+
+[node name="startGameDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="startGameDetection"]
+position = Vector2(452.5, 123)
+shape = SubResource("RectangleShape2D_smgfi")
+
+[connection signal="body_entered" from="startGameDetection" to="." method="_on_start_game_detection_body_entered"]
