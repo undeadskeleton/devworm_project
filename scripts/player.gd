@@ -13,7 +13,7 @@ var weapon_ready : bool
 var health : int = 100
 var is_alive : bool
 var is_allowed_to_take_damage : bool
-var damage = 0
+var damage : int 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 900
 
@@ -26,8 +26,6 @@ func _ready():
 	print(weapon_ready)
  
 func _physics_process(delta):
-	#is_alive = true
-	#is_allowed_to_take_damage = true
 	weapon_ready = GlobalScript.playerWeaponEquiped
 	GlobalScript.playerDamageZone =deal_damage_zone
 	# Add the gravity.
@@ -89,15 +87,18 @@ func handle_death_animation():
 	await get_tree().create_timer(0.5).timeout
 	$Camera2D.zoom.x = 4
 	$Camera2D.zoom.y = 4
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(3).timeout
 	GlobalScript.playerAlive = false
+	await get_tree().create_timer(0.5).timeout
 	self.queue_free()
+	
 
 
 func take_damage_cooldown(wait_time):
 	is_allowed_to_take_damage = false
 	await get_tree().create_timer(wait_time).timeout
 	is_allowed_to_take_damage = true
+	damage = 0
 
 
 
@@ -111,7 +112,6 @@ func handle_animation(dir):
 		if !is_on_floor():
 			if velocity.y < 0:
 				animated_sprite.play("jump_up")
-				
 			else:
 				animated_sprite.play("fall")
 	elif weapon_ready:
@@ -123,7 +123,6 @@ func handle_animation(dir):
 		elif !is_on_floor() and !current_attack:
 			if velocity.y < 0:
 				animated_sprite.play("jump_up")
-				
 			else:
 				animated_sprite.play("weapon_fall")
 		

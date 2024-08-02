@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://drdg8tmjkxmyu"]
+[gd_scene load_steps=11 format=3 uid="uid://drdg8tmjkxmyu"]
 
 [ext_resource type="Texture2D" uid="uid://bypr7geaxgoxo" path="res://assets/Background.png" id="1_grwqk"]
 [ext_resource type="Script" path="res://scripts/stage_lvl.gd" id="1_krtvl"]
 [ext_resource type="Texture2D" uid="uid://btulhximx4ipk" path="res://assets/TileSet-36x36.png" id="1_relvn"]
 [ext_resource type="PackedScene" uid="uid://wovkjidshlch" path="res://scene/player.tscn" id="3_x5qve"]
 [ext_resource type="PackedScene" uid="uid://df8hvsaxq6eqn" path="res://scene/bat_enemy.tscn" id="5_86mxp"]
+[ext_resource type="PackedScene" uid="uid://dfurcfg10wi2b" path="res://scene/scene_transition_animation.tscn" id="6_q1sqt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pwdwb"]
 texture = ExtResource("1_relvn")
@@ -94,3 +95,5 @@ position = Vector2(783, 462)
 
 [node name="batEnemy4" parent="." instance=ExtResource("5_86mxp")]
 position = Vector2(471, 442)
+
+[node name="scene_Transition_Animation" parent="." instance=ExtResource("6_q1sqt")]
