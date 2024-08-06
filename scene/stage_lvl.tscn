@@ -98,6 +98,6 @@ position = Vector2(783, 462)
 position = Vector2(471, 442)
 
 [node name="toxicFrog" parent="." instance=ExtResource("6_nhkly")]
-position = Vector2(362, 394)
+position = Vector2(659, 498)
 
 [node name="scene_Transition_Animation" parent="." instance=ExtResource("6_q1sqt")]
