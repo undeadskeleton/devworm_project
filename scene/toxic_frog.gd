@@ -26,7 +26,6 @@ const gravity : int = 900
 
 func _ready():
 	dead = false
-	is_chasing = true
 	is_taking_damage = false
 	is_roaming = false
 	print("enemy chase at ready is : ",is_chasing)
@@ -40,6 +39,11 @@ func _process(delta):
 	move(delta)
 	handle_animation()
 	move_and_slide()
+	
+	if GlobalScript.playerAlive:
+		is_chasing = true
+	elif !GlobalScript.playerAlive:
+		is_chasing = false
 	
 func move(delta):
 	player = GlobalScript.playerBody
@@ -110,11 +114,9 @@ func handle_death_animation():
 
 
 func _on_frog_damage_zone_area_entered(area):
-		while area == GlobalScript.playerHitBox:
+		if area == GlobalScript.playerHitBox:
 			is_attacking = true
 			await get_tree().create_timer(2.0).timeout
 			is_attacking = false
-			if area != GlobalScript.playerHitBox:
-				break
-			print(area)
+			
 			
