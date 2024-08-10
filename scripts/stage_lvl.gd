@@ -46,6 +46,8 @@ func positon_to_next_wave():
 		prepare_spawn("bats",4.0,4.0)
 		prepare_spawn("frogs",1.5,2.0)
 		print(current_wave)
+		
+		
 
 func prepare_spawn(type ,multiplier,mob_spawn):
 	var mob_amount = float(current_wave) * multiplier
