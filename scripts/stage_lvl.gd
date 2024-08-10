@@ -23,10 +23,21 @@ func _ready():
 	current_node = get_child_count()
 	positon_to_next_wave()
 
+func _process(delta):
+	if !GlobalScript.playerAlive:
+		sceneTransitionAnimation.play("fade_in")
+		await get_tree().create_timer(0.5).timeout
+		get_tree().change_scene_to_file("res://scene/lobby_lvl.tscn")
+		
+	current_node = get_child_count()
+	
+	if wave_spawn_ended:
+			positon_to_next_wave()
+			
 func positon_to_next_wave():
 	if current_node == starting_node:
 		if current_wave != 0:
-			GlobalScript.moving_to_next_wave = true
+			GlobalScript.moving_to_next_wave = true 
 		wave_spawn_ended = false
 		sceneTransitionAnimation.play("between_wave_animation")
 		current_wave += 1
@@ -80,15 +91,3 @@ func spawn_type(type,mob_spawn_rounds,mob_waitTime):
 				await get_tree().create_timer(mob_waitTime).timeout
 	wave_spawn_ended = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if !GlobalScript.playerAlive:
-		sceneTransitionAnimation.play("fade_in")
-		await get_tree().create_timer(0.5).timeout
-		get_tree().change_scene_to_file("res://scene/lobby_lvl.tscn")
-		
-	current_node = get_child_count()
-	print("starting node : ",starting_node)
-	print("current node : ",current_node)
-	
-	if wave_spawn_ended:
-			positon_to_next_wave()
