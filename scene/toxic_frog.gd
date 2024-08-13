@@ -37,7 +37,11 @@ func move(delta):
 			var dir_to_player = position.direction_to(player.position) * speed
 			velocity.x = dir_to_player.x
 			dir.x = abs(velocity.x)/velocity.x
+		elif is_taking_damage:
+			var knockback_force = position.direction_to(player.position) * -100
+			velocity.x = knockback_force.x
 		move_and_slide()
+		
 	elif dead:
 		velocity.x = 0
 		
@@ -48,6 +52,8 @@ func handle_animation():
 			animatedsprite.flip_h = false
 		elif dir.x == -1:
 			animatedsprite.flip_h = true
+	if is_taking_damage:
+		animatedsprite.play("hurt")
 
 func _on_direction_timer_timeout():
 	$DirectionTimer.wait_time = chose([0.5,1,1.6])
@@ -57,3 +63,8 @@ func _on_direction_timer_timeout():
 func chose(array):
 	array.shuffle()
 	return array.front()
+
+
+func _on_frog_hit_box_area_entered(area):
+	if area == GlobalScript.playerDamageZone:
+		is_taking_damage = true

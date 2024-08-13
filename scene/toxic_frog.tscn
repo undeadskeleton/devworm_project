@@ -305,3 +305,4 @@ position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_lweuv")
 
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
+[connection signal="area_entered" from="frogHitBox" to="." method="_on_frog_hit_box_area_entered"]
