@@ -10,3 +10,7 @@ var playerAlive : bool
 
 var batDamageZone : Area2D
 var batDamage : int
+
+var frogHitBox : Area2D
+var frogDamageZone :Area2D
+var frogDamage :int
