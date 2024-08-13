@@ -2,9 +2,5 @@ res://scene/stage_lvl.tscn
 res://scene/lobby_lvl.tscn
 res://scene/player.tscn
 res://scene/bat_enemy.tscn
-res://scripts/player.gd
-res://scripts/lobby_lvl.gd
 res://scene/scene_transition_animation.tscn
-res://scripts/stage_lvl.gd
-res://scene/toxic_frog.gd
 res://scene/toxic_frog.tscn
