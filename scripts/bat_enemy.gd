@@ -44,7 +44,7 @@ func move(delta):
 			velocity = position.direction_to(player.position) * speed
 			dir.x = abs(velocity.x)/velocity.x
 		elif is_talking_damage:
-			var knockback = position.direction_to(player.position) * -50
+			var knockback = position.direction_to(player.position) * -250
 			velocity = knockback
 		else:
 			velocity += speed * dir * delta

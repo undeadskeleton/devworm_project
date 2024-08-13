@@ -7,3 +7,4 @@ res://scene/toxic_frog.tscn
 res://scene/toxic_frog.gd
 res://scripts/player.gd
 res://scripts/global_script.gd
+res://scripts/bat_enemy.gd
