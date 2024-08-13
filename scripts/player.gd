@@ -5,13 +5,12 @@ class_name PlayerBody
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var deal_damage_zone = $playerDamageZone
 
-
 const SPEED = 250.0
 const JUMP_VELOCITY = -350.0
 var current_attack :bool
 var attack_type : String
 var weapon_ready : bool
-var health : int = 10000
+var health : int = 100
 var is_alive : bool
 var is_allowed_to_take_damage : bool
 var damage : int 
@@ -20,7 +19,6 @@ var gravity = 900
 
 
 func _ready():
-	GlobalScript.playerHitBox = $playerHitBox
 	GlobalScript.playerBody = self
 	GlobalScript.playerAlive = true
 	is_alive = true
@@ -66,8 +64,6 @@ func check_hitbox():
 		var hitbox = area_hitbox.front()
 		if hitbox.get_parent() is Batenemy:
 			damage = GlobalScript.batDamage
-		elif hitbox.get_parent() is toxicFrog:
-			damage = GlobalScript.frogDamage
 	
 	if is_allowed_to_take_damage:
 		take_damage(damage)
