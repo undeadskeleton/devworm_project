@@ -4,3 +4,5 @@ res://scene/player.tscn
 res://scene/bat_enemy.tscn
 res://scene/scene_transition_animation.tscn
 res://scene/toxic_frog.tscn
+res://scene/toxic_frog.gd
+res://scripts/player.gd
