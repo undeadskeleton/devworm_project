@@ -276,7 +276,7 @@ radius = 9.0
 radius = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lweuv"]
-radius = 11.0
+radius = 20.0
 
 [node name="toxicFrog" type="CharacterBody2D"]
 script = ExtResource("1_ch0sj")
@@ -306,3 +306,4 @@ shape = SubResource("CircleShape2D_lweuv")
 
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
 [connection signal="area_entered" from="frogHitBox" to="." method="_on_frog_hit_box_area_entered"]
+[connection signal="body_entered" from="frogDamageZone" to="." method="_on_frog_damage_zone_body_entered"]

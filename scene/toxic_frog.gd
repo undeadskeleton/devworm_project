@@ -1,10 +1,10 @@
 extends CharacterBody2D
-
+class_name FrogEnemy
 var health = 80
 
 var speed = 40
 @onready var animatedsprite = $AnimatedSprite2D
-var damage_to_deal : int = 20
+var damage_to_deal : int = 40
 var dir : Vector2
 var is_chasing : bool
 
@@ -34,7 +34,13 @@ func _process(delta):
 		velocity.y += gravity
 	move(delta)
 	handle_animation()
-
+	
+	if GlobalScript.playerAlive:
+		is_chasing = true
+	elif !GlobalScript.playerAlive:
+		is_chasing = false
+		
+		
 func move(delta):
 	if !dead:
 		is_roaming = true
@@ -64,6 +70,10 @@ func handle_animation():
 		animatedsprite.play("hurt")
 		await get_tree().create_timer(0.4).timeout
 		is_taking_damage = false
+	elif is_attacking:
+		animatedsprite.play("attack")
+		await get_tree().create_timer(1).timeout
+		is_attacking = false
 		
 
 func _on_direction_timer_timeout():
@@ -87,3 +97,11 @@ func taking_damage(damage):
 	if !dead:
 		health -= damage
 		print("current health : ",health)
+
+
+
+func _on_frog_damage_zone_body_entered(body):
+	if body == GlobalScript.playerBody:
+		is_attacking = true
+		GlobalScript.frogDamage = damage_to_deal
+		

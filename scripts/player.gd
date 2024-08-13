@@ -10,7 +10,7 @@ const JUMP_VELOCITY = -350.0
 var current_attack :bool
 var attack_type : String
 var weapon_ready : bool
-var health : int = 10000
+var health : int = 200
 var is_alive : bool
 var is_allowed_to_take_damage : bool
 var damage : int 
@@ -64,6 +64,8 @@ func check_hitbox():
 		var hitbox = area_hitbox.front()
 		if hitbox.get_parent() is Batenemy:
 			damage = GlobalScript.batDamage
+		elif hitbox.get_parent() is FrogEnemy:
+			damage = GlobalScript.frogDamage
 	
 	if is_allowed_to_take_damage:
 		take_damage(damage)
