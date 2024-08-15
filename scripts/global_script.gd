@@ -14,3 +14,6 @@ var batDamage : int
 var frogHitBox : Area2D
 var frogDamageZone :Area2D
 var frogDamage :int
+
+var current_wave : int
+var moving_to_next_wave : bool

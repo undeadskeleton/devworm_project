@@ -49,6 +49,8 @@ size = Vector2(132.5, 538)
 
 [node name="StageLvl" type="Node2D"]
 script = ExtResource("1_krtvl")
+bat_scene = ExtResource("5_86mxp")
+frog_scene = ExtResource("6_nhkly")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(808.5, 340)
@@ -78,9 +80,6 @@ shape = SubResource("RectangleShape2D_rcl56")
 [node name="Player" parent="." instance=ExtResource("3_x5qve")]
 position = Vector2(239, 29)
 
-[node name="batEnemy" parent="." instance=ExtResource("5_86mxp")]
-position = Vector2(548, 464)
-
 [node name="batcollision" type="StaticBody2D" parent="."]
 collision_layer = 2
 collision_mask = 2
@@ -88,16 +87,22 @@ collision_mask = 2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="batcollision"]
 polygon = PackedVector2Array(-1, -2, 80, 2, 93, 44, 94, 532, 539, 532, 875, 529, 1502, 531, 1497, 345, 1496, 37, 1485, -3, 1097, -1, 607, 2, 344, 1, 94, -3, 79, -66, 1650, -67, 1657, 397, 1645, 612, 22, 620)
 
-[node name="batEnemy3" parent="." instance=ExtResource("5_86mxp")]
-position = Vector2(320, 456)
+[node name="batSpawn" type="Marker2D" parent="."]
+position = Vector2(410, 286)
 
-[node name="batEnemy2" parent="." instance=ExtResource("5_86mxp")]
-position = Vector2(783, 462)
+[node name="batSpawn2" type="Marker2D" parent="."]
+position = Vector2(699, 298)
 
-[node name="batEnemy4" parent="." instance=ExtResource("5_86mxp")]
-position = Vector2(471, 442)
+[node name="batSpawn3" type="Marker2D" parent="."]
+position = Vector2(1033, 285)
 
-[node name="toxicFrog" parent="." instance=ExtResource("6_nhkly")]
-position = Vector2(362, 394)
+[node name="batSpawn4" type="Marker2D" parent="."]
+position = Vector2(1270, 296)
+
+[node name="frogSpawn" type="Marker2D" parent="."]
+position = Vector2(228, 506)
+
+[node name="frogSpawn2" type="Marker2D" parent="."]
+position = Vector2(1435, 529)
 
 [node name="scene_Transition_Animation" parent="." instance=ExtResource("6_q1sqt")]

@@ -30,16 +30,16 @@ func _ready():
 	player = GlobalScript.playerBody
 	
 func _process(delta):
-	if !is_on_floor():
-		velocity.y += gravity
-	move(delta)
-	handle_animation()
-	
 	if GlobalScript.playerAlive:
 		is_chasing = true
 	elif !GlobalScript.playerAlive:
 		is_chasing = false
 		
+	if !is_on_floor():
+		velocity.y += gravity
+	move(delta)
+	handle_animation()
+	
 		
 func move(delta):
 	if !dead:
