@@ -74,7 +74,6 @@ func take_damage(damage):
 	if damage != 0: 
 		if health > 0:
 			health -= damage
-			print("current health", health)
 			if health <= 0:
 				health = 0
 				print("dead")
