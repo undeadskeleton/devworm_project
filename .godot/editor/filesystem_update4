@@ -6,3 +6,6 @@ res://scene/scene_transition_animation.tscn
 res://scene/toxic_frog.tscn
 res://scripts/stage_lvl.gd
 res://scripts/global_script.gd
+res://scripts/player.gd
+res://scene/toxic_frog.gd
+res://scripts/bat_enemy.gd

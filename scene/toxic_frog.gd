@@ -8,12 +8,12 @@ var damage_to_deal : int = 40
 var dir : Vector2
 var is_chasing : bool
 
-
 var player 
 
 var dead : bool
 var is_attacking : bool
 var is_taking_damage : bool
+var allowed_to_take_damage : bool 
 var knockback : int = -150
 const gravity : int = 900
 
@@ -27,6 +27,8 @@ func _ready():
 	is_chasing = true
 	is_attacking = false
 	is_taking_damage = false
+	allowed_to_take_damage = false
+	is_roaming = true
 	player = GlobalScript.playerBody
 	
 func _process(delta):
@@ -42,8 +44,7 @@ func _process(delta):
 	
 		
 func move(delta):
-	if !dead:
-		is_roaming = true
+	if !dead and is_roaming:
 		if !is_chasing:
 			velocity += dir * speed * delta
 		elif is_chasing and !is_taking_damage:
@@ -51,11 +52,9 @@ func move(delta):
 			velocity.x = dir_to_player.x
 			dir.x = abs(velocity.x)/velocity.x
 		elif is_taking_damage:
-			print("frog is knockbacked")
 			var knockback_dir = position.direction_to(player.position) * knockback
 			velocity.x = knockback_dir.x
 		move_and_slide()
-		
 	elif dead:
 		velocity.x = 0
 		
@@ -74,6 +73,11 @@ func handle_animation():
 		animatedsprite.play("attack")
 		await get_tree().create_timer(1).timeout
 		is_attacking = false
+	elif dead and is_roaming:
+		is_roaming = false
+		animatedsprite.play("death")
+		await get_tree().create_timer(1).timeout
+		self.queue_free()
 		
 
 func _on_direction_timer_timeout():
@@ -89,15 +93,25 @@ func chose(array):
 func _on_frog_hit_box_area_entered(area):
 	if area == GlobalScript.playerDamageZone:
 		damage_taken = GlobalScript.playerDamage
-		is_taking_damage = true
+		allowed_to_take_damage = true
 		
 		taking_damage(damage_taken)
 		
 func taking_damage(damage):
 	if !dead:
 		health -= damage
+		is_taking_damage = true
 		print("current health : ",health)
+		if health <= 0:
+			health = 0
+			dead = true
+		damage_cooldown(1.5)
 
+func damage_cooldown(wait_time):
+	allowed_to_take_damage = false
+	await get_tree().create_timer(wait_time).timeout
+	allowed_to_take_damage = true
+	is_taking_damage = false
 
 
 func _on_frog_damage_zone_body_entered(body):

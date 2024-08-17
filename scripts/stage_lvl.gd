@@ -33,7 +33,7 @@ func proceed_to_next_wave():
 			sceneTransitionAnimation.play("in_between")
 			await get_tree().create_timer(1).timeout
 			print(current_wave)
-			spawn_enemy("bats",4.0,4.0) #type,multiplier,spawns
+			spawn_enemy("bat",4.0,4.0) #type,multiplier,spawns
 			spawn_enemy("frog",1.5,2.0)
 
 func spawn_enemy(type,multiplier,mob_spawns):
@@ -64,7 +64,6 @@ func spawn_type(type,mob_spawn_round,mob_wait_time):
 			add_child(bat4)
 			mob_spawn_round -= 1
 			await get_tree().create_timer(mob_wait_time).timeout
-	"""
 	elif type == "frog":
 		var frog_spawn1 = $frogSpawn
 		var frog_spawn2 = $frogSpawn2
@@ -72,12 +71,11 @@ func spawn_type(type,mob_spawn_round,mob_wait_time):
 			var frog1 = frog_scene.instantiate()
 			frog1.global_position = frog_spawn1.global_position
 			var frog2 = frog_scene.instantiate()
-			frog2.global_position = frog_spawn2.global_postion
+			frog2.global_position = frog_spawn2.global_position
 			add_child(frog1)
 			add_child(frog2)
 			mob_spawn_round -=1
 			await get_tree().create_timer(mob_wait_time).timeout
-	"""
 	wave_spawn_end = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

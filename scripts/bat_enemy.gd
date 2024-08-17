@@ -94,7 +94,7 @@ func taking_damage():
 	if health <= 0:
 		health = 0
 		dead = true
-		print(str(self)," the current health is " , health, "and is_taking_damage", str(is_talking_damage))
+		
 		
 		
 	
