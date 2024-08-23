@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://wovkjidshlch"]
+[gd_scene load_steps=70 format=3 uid="uid://wovkjidshlch"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pacu0"]
 [ext_resource type="Texture2D" uid="uid://bxmuevp3gv7uf" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png" id="2_cchxm"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cwf1vorw40xk6" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 1 Sprite Sheet.png" id="8_3mnoq"]
 [ext_resource type="Texture2D" uid="uid://gp05isauh3o7" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 0.png" id="9_7f8kq"]
 [ext_resource type="Texture2D" uid="uid://oox2hppkkx86" path="res://assets/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/Run Sprite 2.png" id="10_0rgse"]
+[ext_resource type="PackedScene" uid="uid://cn8bpbc7jd8wb" path="res://scene/healthbar.tscn" id="12_t7hmt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ho2xu"]
 atlas = ExtResource("2_cchxm")
@@ -455,10 +456,8 @@ script = ExtResource("1_pacu0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7ag25")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
-frame = 7
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 10)
@@ -484,5 +483,11 @@ disabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerHitBox"]
 position = Vector2(1, 6)
 shape = SubResource("CapsuleShape2D_5urnf")
+
+[node name="healthbar" parent="." instance=ExtResource("12_t7hmt")]
+offset_left = -11.0
+offset_top = 19.0
+offset_right = 8.0
+offset_bottom = 28.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

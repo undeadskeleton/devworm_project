@@ -6,6 +6,9 @@ const speed = 30
 var dir: Vector2
 var player : CharacterBody2D
 var is_bat_chase: bool
+
+var max_health : int = 60
+var min_health :int = 0
 var health = 60
 var damage : int
 var dead = false

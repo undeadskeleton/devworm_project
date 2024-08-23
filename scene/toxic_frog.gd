@@ -1,6 +1,9 @@
 extends CharacterBody2D
 class_name FrogEnemy
-var health = 80
+
+var max_health : int = 80
+var min_health :int = 0
+var health : int =  80
 
 var speed = 40
 @onready var animatedsprite = $AnimatedSprite2D

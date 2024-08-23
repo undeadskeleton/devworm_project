@@ -10,7 +10,11 @@ const JUMP_VELOCITY = -350.0
 var current_attack :bool
 var attack_type : String
 var weapon_ready : bool
+
+var max_health : int = 200
+var min_health :int = 0
 var health : int = 200
+
 var is_alive : bool
 var is_allowed_to_take_damage : bool
 var damage : int 

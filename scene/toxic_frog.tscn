@@ -1,7 +1,8 @@
-[gd_scene load_steps=41 format=3 uid="uid://c2h1kgseqk6u5"]
+[gd_scene load_steps=42 format=3 uid="uid://c2h1kgseqk6u5"]
 
 [ext_resource type="Script" path="res://scene/toxic_frog.gd" id="1_ch0sj"]
 [ext_resource type="Texture2D" uid="uid://c2qrvfhgyve2n" path="res://assets/ToxicFrog/BlueBrown/ToxicFrogBlueBrown_Sheet.png" id="1_h6121"]
+[ext_resource type="PackedScene" uid="uid://cn8bpbc7jd8wb" path="res://scene/healthbar.tscn" id="3_5uri2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xqr8u"]
 atlas = ExtResource("1_h6121")
@@ -303,6 +304,12 @@ shape = SubResource("CircleShape2D_avenh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="frogDamageZone"]
 position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_lweuv")
+
+[node name="healthbar" parent="." instance=ExtResource("3_5uri2")]
+offset_left = -13.0
+offset_top = 11.0
+offset_right = 9.0
+offset_bottom = 19.0
 
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
 [connection signal="area_entered" from="frogHitBox" to="." method="_on_frog_hit_box_area_entered"]
