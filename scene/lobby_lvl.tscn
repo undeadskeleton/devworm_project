@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://babvxt7rh26ds"]
+[gd_scene load_steps=16 format=3 uid="uid://babvxt7rh26ds"]
 
 [ext_resource type="Texture2D" uid="uid://btulhximx4ipk" path="res://assets/TileSet-36x36.png" id="1_0y4p2"]
 [ext_resource type="Texture2D" uid="uid://3a3aq6a1loyi" path="res://assets/Bushes-16x16.png" id="1_ngla7"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dwnxil6eedh7d" path="res://assets/Tree1.png" id="4_v8jl8"]
 [ext_resource type="PackedScene" uid="uid://wovkjidshlch" path="res://scene/player.tscn" id="6_1cmht"]
 [ext_resource type="PackedScene" uid="uid://dfurcfg10wi2b" path="res://scene/scene_transition_animation.tscn" id="8_oqape"]
+[ext_resource type="Script" path="res://scene/previousscore.gd" id="9_37omf"]
+[ext_resource type="Script" path="res://scene/highscore.gd" id="10_fis77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w641i"]
 texture = ExtResource("1_ngla7")
@@ -81,6 +83,7 @@ script = ExtResource("1_yejjw")
 tile_set = SubResource("TileSet_ueq4k")
 format = 2
 layer_0/tile_data = PackedInt32Array(65545, 65536, 4, 65546, 131072, 4, 65547, 196608, 4, 131086, 65536, 1342177284, 196622, 131072, 1342177284, 262158, 196608, 1342177284, 327694, 65536, 1342177284, 196616, 65536, 5, 262152, 65536, 5, 327688, 65536, 5, 131080, 65536, 4, 131081, 131072, 5, 196617, 131072, 6, 262153, 131072, 5, 327689, 131072, 6, 131082, 131072, 5, 196618, 131072, 6, 262154, 131072, 5, 327690, 131072, 6, 131083, 131072, 5, 196619, 131072, 6, 262155, 131072, 5, 327691, 131072, 6, 131084, 196608, 1610612741, 196620, 131072, 6, 262156, 131072, 5, 327692, 131072, 6, 131085, 196608, 1610612741, 196621, 131072, 6, 262157, 131072, 5, 327693, 131072, 6)
+layer_1/name = "Layer1"
 layer_1/tile_data = PackedInt32Array(196622, 65536, 0, 196623, 131072, 0, 196624, 196608, 0, 262161, 131072, 0, 262162, 131072, 2, 262163, 196608, 2, 196626, 131072, 0, 327696, 65536, 2, 327697, 65536, 2, 327698, 131072, 2, 262160, 131072, 1, 327695, 65536, 2, 262158, 131072, 1, 262159, 131072, 1, 327694, 131072, 1, 196612, 65536, 0, 196616, 65536, 1342177280, 196613, 65536, 1342177280, 262152, 65536, 805306368, 327688, 65536, 1342177280, 327686, 65536, 1342177280, 131079, 65536, 1342177280)
 
 [node name="GroundTileMap" type="TileMap" parent="StaticBody2D"]
@@ -115,5 +118,23 @@ position = Vector2(452.5, 123)
 shape = SubResource("RectangleShape2D_smgfi")
 
 [node name="scene_Transition_Animation" parent="." instance=ExtResource("8_oqape")]
+
+[node name="lobbyscoresystem" type="StaticBody2D" parent="."]
+
+[node name="previousscore" type="RichTextLabel" parent="lobbyscoresystem"]
+offset_left = 226.0
+offset_top = 12.0
+offset_right = 424.0
+offset_bottom = 47.0
+text = "PREVIOUS SCORE : 9999"
+script = ExtResource("9_37omf")
+
+[node name="highscore" type="RichTextLabel" parent="lobbyscoresystem"]
+offset_left = 262.0
+offset_top = -9.0
+offset_right = 414.0
+offset_bottom = 19.0
+text = "HIGH SCORE : 9999"
+script = ExtResource("10_fis77")
 
 [connection signal="body_entered" from="startGameDetection" to="." method="_on_start_game_detection_body_entered"]

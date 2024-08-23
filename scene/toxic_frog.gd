@@ -21,13 +21,14 @@ var is_roaming : bool
 var damage_taken : int
 var damage_done : int
 
+var points_for_kill : int = 250
 
 func _ready():
 	dead = false
 	is_chasing = true
 	is_attacking = false
 	is_taking_damage = false
-	allowed_to_take_damage = false
+	allowed_to_take_damage = true
 	is_roaming = true
 	player = GlobalScript.playerBody
 	
@@ -77,6 +78,7 @@ func handle_animation():
 		is_roaming = false
 		animatedsprite.play("death")
 		await get_tree().create_timer(1).timeout
+		GlobalScript.current_score +=points_for_kill
 		self.queue_free()
 		
 
@@ -93,9 +95,8 @@ func chose(array):
 func _on_frog_hit_box_area_entered(area):
 	if area == GlobalScript.playerDamageZone:
 		damage_taken = GlobalScript.playerDamage
-		allowed_to_take_damage = true
-		
-		taking_damage(damage_taken)
+		if allowed_to_take_damage:
+			taking_damage(damage_taken)
 		
 func taking_damage(damage):
 	if !dead:

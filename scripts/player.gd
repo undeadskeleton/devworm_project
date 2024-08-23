@@ -10,7 +10,7 @@ const JUMP_VELOCITY = -350.0
 var current_attack :bool
 var attack_type : String
 var weapon_ready : bool
-var health : int = 2000
+var health : int = 200
 var is_alive : bool
 var is_allowed_to_take_damage : bool
 var damage : int 
@@ -74,6 +74,7 @@ func take_damage(damage):
 	if damage != 0: 
 		if health > 0:
 			health -= damage
+			print(self,health)
 			if health <= 0:
 				health = 0
 				print("dead")
@@ -173,4 +174,3 @@ func set_damage(attack_type):
 	elif attack_type == "air":
 		current_damage_dealt = 20
 	GlobalScript.playerDamage = current_damage_dealt
-

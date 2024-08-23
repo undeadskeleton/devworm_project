@@ -13,6 +13,8 @@ var is_talking_damage = false
 var is_roaming : bool
 var batDamage = 20
 
+var points_for_kill : int = 100
+
 func _ready():
 	pass
 
@@ -27,6 +29,7 @@ func _process(delta):
 		
 	if dead and is_on_floor_only():
 		await get_tree().create_timer(3.0).timeout
+		GlobalScript.current_score +=points_for_kill
 		self.queue_free()
 	move(delta)
 	handle_animation()

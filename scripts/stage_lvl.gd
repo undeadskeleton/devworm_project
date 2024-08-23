@@ -25,7 +25,6 @@ func _ready():
 	proceed_to_next_wave()
 	
 func proceed_to_next_wave():
-	print("currentNode: ",current_node," startingNode:",starting_node)
 	if current_node == starting_node:
 		print("current wave = ",current_wave)
 		if current_wave!=0:
@@ -83,15 +82,21 @@ func spawn_type(type,mob_spawn_round,mob_wait_time):
 				mob_spawn_round -=1
 				await get_tree().create_timer(mob_wait_time).timeout
 	wave_spawn_end = true
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+func update_Score():
+	GlobalScript.previous_score = GlobalScript.current_score
+	if GlobalScript.current_score > GlobalScript.high_score:
+		GlobalScript.high_score = GlobalScript.current_score
+	GlobalScript.current_score = 0
+		
 func _process(delta):
 	if !GlobalScript.playerAlive:
 		sceneTransitionAnimation.play("fade_in")
 		await get_tree().create_timer(0.5).timeout
+		update_Score()
 		get_tree().change_scene_to_file("res://scene/lobby_lvl.tscn")
 	current_node = get_child_count()
 	if wave_spawn_end:
 			proceed_to_next_wave()
 			
 	
-

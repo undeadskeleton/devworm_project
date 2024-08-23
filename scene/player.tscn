@@ -470,7 +470,7 @@ zoom = Vector2(2.5, 2.5)
 limit_left = 30
 limit_top = -7
 limit_right = 1495
-limit_bottom = 576
+limit_bottom = 598
 
 [node name="playerDamageZone" type="Area2D" parent="."]
 
