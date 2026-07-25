@@ -88,6 +88,7 @@ func handle_animation():
 func _on_direction_timer_timeout():
 	$DirectionTimer.wait_time = chose([0.5,1,1.6])
 	dir = chose([Vector2.RIGHT,Vector2.LEFT])
+	print(dir," change in timeout")
 	velocity.x = 0
 	
 func chose(array):

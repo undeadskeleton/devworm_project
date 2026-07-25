@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dlo1abi2tw0pg"]
 
-[ext_resource type="Texture2D" uid="uid://bypr7geaxgoxo" path="res://devworm_project/assets/Background.png" id="1_s8sf0"]
+[ext_resource type="Texture2D" uid="uid://bypr7geaxgoxo" path="res://assets/Background.png" id="1_s8sf0"]
 
 [node name="Parallax" type="Node2D"]
 
